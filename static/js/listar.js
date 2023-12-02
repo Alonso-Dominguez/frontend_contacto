@@ -1,7 +1,7 @@
 async function cargarContactos() {
+    const apiURL = 'https://backend-contactos-jadc-b1444a39f4f7.herokuapp.com/contactos';
     const response = await fetch(apiURL, {method: 'GET', mode: 'cors'});
     const data = await response.json();
-    const apiURL = 'https://backend-contactos-jadc-b1444a39f4f7.herokuapp.com/contactos';
   
     if (response.status === 200) {
         const contactos = await response.json();
