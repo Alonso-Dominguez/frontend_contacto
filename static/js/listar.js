@@ -1,16 +1,8 @@
 async function cargarContactos() {
-    const apiURL = 'https://backend-contactos-bloqueo-fb3d5fd89684.herokuapp.com/contactos';
-
-    // Obtén el token desde donde lo tengas almacenado
-    const token = 'data.token';  
+    const apiURL = 'https://backend-contactos-jadc-b1444a39f4f7.herokuapp.com/contactos';
 
     try {
-        const headers = new Headers({
-            "Authorization": `Bearer ${token}`,
-            "Content-Type": "application/json",
-        });
-
-        const response = await fetch(apiURL, { method: 'GET', mode: 'cors', headers: headers });
+        const response = await fetch(apiURL, { method: 'GET', mode: 'cors' });
 
         if (response.status === 200) {
             const contactos = await response.json();
