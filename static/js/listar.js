@@ -2,7 +2,7 @@ async function cargarContactos() {
     const apiURL = 'https://backend-contactos-bloqueo-fb3d5fd89684.herokuapp.com/contactos';
 
     // Obtén el token desde donde lo tengas almacenado
-    const token = "data.token";  
+    const token = data.token;  
 
     try {
         const headers = new Headers({
